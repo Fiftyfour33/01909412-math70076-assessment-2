@@ -10,7 +10,7 @@ https://apnorc.org/wp-content/uploads/2021/05/AP_VOTECAST_2024_GENERAL.zip
 ## 1-click setup
 ```bash
 git clone https://github.com/Fiftyfour33/01909412-math70076-assessment-2.git
-cd 01909412-math70076-assessment-2
+cd 01909412-math70076-assessment-2-1.0
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python data/get_votecast.py
