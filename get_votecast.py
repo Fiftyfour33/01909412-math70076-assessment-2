@@ -57,6 +57,7 @@ def main(force: bool=False):
         filename = Path(url).name
         final_path = DEST_DIR / filename
         tmp_path = TMP_DIR / filename
+        secondary_path_2020 = Path("data/raw/AP VoteCast 2020 General Election Files 1224.zip")
 
         # Skip if already present & verified
         if final_path.exists() and not force:
@@ -87,6 +88,8 @@ def main(force: bool=False):
             print("   Unzipping...")
             unzip(final_path, DEST_DIR)
         print("   Done.\n")
+
+    unzip(secondary_path_2020, DEST_DIR)
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Fetch AP-NORC VoteCast data and verify SHA-256 digests.")
