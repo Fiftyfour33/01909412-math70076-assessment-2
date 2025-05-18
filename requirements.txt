@@ -1,0 +1,13 @@
+pandas>=2.0
+numpy>=1.21
+matplotlib>=3.4
+ipython>=8.0
+notebook>=7.0
+plotly>=6.0
+umap-learn>=0.5
+scipy>=1.7
+hdbscan>=0.8
+seaborn>=0.13
+statsmodels>=0.14
+tqdm>=4.60
+scikit-learn>=1.0
