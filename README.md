@@ -1,9 +1,10 @@
 ## Notebook text layer "autofix"
-Jupyter's auto-formatter will try and interpret the RegEx string as in MathJax mode, destroying the code integrity in the process.
+Jupyter's auto-formatter will try and interpret the RegEx string as in MathJax mode, corrupting RegEx strings (especially the parantheses) in the process.
 
-If readers see RegEx strings (variables `pattern` and `delabel_pattern`) with parantheses missing, manually replace them in-line with:
-> `pattern = r"^\(99\).*$"`
-> `delabel_battern = r"^\(\d+\)\s*"`
+If readers see RegEx strings (e.g. variables `pattern`) having no parantheses, manually replace them in-line with:
+> `pattern = r"^9999.*$"` should be changed to `pattern = r"^\(99\).*$"`
+> `r"^\d+\d+\s*"` should be changed to `r"^\(\d+\)\s*"`
+before proceeding with interactive elements.
 
 ## Raw data
 The VoteCast PUF ZIPs are 165 MB total; ~ 650 MB after decompression, exclusing redundant coding in non-CSV formats.
